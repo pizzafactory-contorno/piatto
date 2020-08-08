@@ -3,7 +3,11 @@ set -eu
 
 DISTRIBUTION_NAME=${DOCKER_TAG%-*}
 TMP=${DOCKER_TAG#*-}
-VERSION_NAME=${TMP%_*}
+if [ "${DISTRIBUTION_NAME}" = "${TMP}" ]; then
+  VERSION_NAME=latest
+else
+  VERSION_NAME=${TMP%_*}
+fi
 ARCH_NAME=${TMP#*_}
 
 if [ -z "${DOCKERFILE_PATH+UNDEF}" ]; then
