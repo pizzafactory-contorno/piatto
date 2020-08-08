@@ -1,0 +1,16 @@
+#!/bin/bash
+set -eu
+
+DISTRIBUTION_NAME=${DOCKER_TAG%-*}
+TMP=${DOCKER_TAG#*-}
+VERSION_NAME=${TMP%_*}
+ARCH_NAME=${TMP#*_}
+
+if [ -z "${DOCKERFILE_PATH+UNDEF}" ]; then
+    DOCKERFILE_PATH_ARG=""
+else
+    DOCKERFILE_PATH_ARG="-f $DOCKERFILE_PATH"
+fi
+
+docker build --build-arg BASE_IMAGE=${DISTRIBUTION_NAME}:${VERSION_NAME} ${DOCKERFILE_PATH_ARG} -t $IMAGE_NAME .
+
