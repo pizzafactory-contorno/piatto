@@ -12,8 +12,8 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y sudo git vim open
       chgrp -R 0 $f && \
       chmod -R g+rwX $f ; \
     done && \
-    sed -e s#^user:x.*#user:x:\${USER_ID}:\${GROUP_ID}::\${HOME}:/bin/bash#g /etc/passwd > /.passwd.template && \
-    sed -e s#^user:x.*#user:x:\${GROUP_ID}#g -e s#^root:x:0:#root:x:0:0,\${USER_ID}:#g /etc/group > /.group.template
+    sed s#user:x.*#user:x:\${USER_ID}:\${GROUP_ID}::\${HOME}:/bin/bash#g /etc/passwd > /.passwd.template && \
+    sed s#root:x:0:#root:x:0:0,\${USER_ID}:#g /etc/group > /.group.template
 COPY [ "entrypoint.sh", "/entrypoint.sh" ]
 
 VOLUME /projects
