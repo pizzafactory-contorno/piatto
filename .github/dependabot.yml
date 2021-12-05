@@ -1,0 +1,14 @@
+version: 2
+updates:
+- package-ecosystem: docker
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: debian
+    versions:
+    - ">= 10.2.pre.slim.a, < 10.3"
+  - dependency-name: ubuntu
+    versions:
+    - ">= 18.04.a, < 18.5"
