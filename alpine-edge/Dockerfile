@@ -1,5 +1,4 @@
-ARG BASE_IMAGE
-FROM ${BASE_IMAGE}
+FROM alpine:edge@sha256:880fafbab5a7602db21ac37f0d17088a29a9a48f98d581f01ce17312c22ccbb5
 LABEL maintainer="Masaki Muranaka <monaka@monami-ya.com>"
 
 RUN apk add --update --no-cache sudo bash bash-completion git openssh-client shadow && \
