@@ -18,33 +18,65 @@ updates:
     interval: daily
 - package-ecosystem: docker
   directory: debian-10
+  ignore:
+  - dependency-name: debian
+    versions:
+    - ">= 10.pre.slim.a, < 11"
   schedule:
     interval: daily
 - package-ecosystem: docker
   directory: debian-10.1
+  ignore:
+  - dependency-name: debian
+    versions:
+    - ">= 10.1.pre.slim.a, < 10.2"
   schedule:
     interval: daily
 - package-ecosystem: docker
   directory: debian-10.2
+  ignore:
+  - dependency-name: debian
+    versions:
+    - ">= 10.2.pre.slim.a, < 10.3"
   schedule:
     interval: daily
 - package-ecosystem: docker
   directory: debian-11.1
+  ignore:
+  - dependency-name: debian
+    versions:
+    - ">= 11.1.pre.slim.a, < 11.2"
   schedule:
     interval: daily
 - package-ecosystem: docker
   directory: debian-9.11
+  ignore:
+  - dependency-name: debian
+    versions:
+    - ">= 9.11.pre.slim.a, < 9.12"
   schedule:
     interval: daily
 - package-ecosystem: docker
   directory: ubuntu-16.04
+  ignore:
+  - dependency-name: ubuntu
+    versions:
+    - ">= 16.04.a, < 16.5"
   schedule:
     interval: daily
 - package-ecosystem: docker
   directory: ubuntu-18.04
+  ignore:
+  - dependency-name: ubuntu
+    versions:
+    - ">= 18.04.a, < 18.5"
   schedule:
     interval: daily
 - package-ecosystem: docker
   directory: ubuntu-20.04
+  ignore:
+  - dependency-name: ubuntu
+    versions:
+    - ">= 20.04.a, < 20.5"
   schedule:
     interval: daily
