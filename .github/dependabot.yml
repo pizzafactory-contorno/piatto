@@ -1,14 +1,46 @@
 version: 2
 updates:
 - package-ecosystem: docker
-  directory: "/"
+  directory: alpine
   schedule:
     interval: daily
-  open-pull-requests-limit: 10
-  ignore:
-  - dependency-name: debian
-    versions:
-    - ">= 10.2.pre.slim.a, < 10.3"
-  - dependency-name: ubuntu
-    versions:
-    - ">= 18.04.a, < 18.5"
+- package-ecosystem: docker
+  directory: alpine-3.10
+  schedule:
+    interval: daily
+- package-ecosystem: docker
+  directory: alpine-3.15.0
+  schedule:
+    interval: daily
+- package-ecosystem: docker
+  directory: alpine-edge
+  schedule:
+    interval: daily
+- package-ecosystem: docker
+  directory: debian-10.1
+  schedule:
+    interval: daily
+- package-ecosystem: docker
+  directory: debian-10.2
+  schedule:
+    interval: daily
+- package-ecosystem: docker
+  directory: debian-11.1
+  schedule:
+    interval: daily
+- package-ecosystem: docker
+  directory: debian-9.11
+  schedule:
+    interval: daily
+- package-ecosystem: docker
+  directory: ubuntu-16.04
+  schedule:
+    interval: daily
+- package-ecosystem: docker
+  directory: ubuntu-18.04
+  schedule:
+    interval: daily
+- package-ecosystem: docker
+  directory: ubuntu-20.04
+  schedule:
+    interval: daily
