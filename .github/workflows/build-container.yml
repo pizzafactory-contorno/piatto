@@ -66,6 +66,7 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
+        if: github.event_name == 'push'
       -
         name: Build and push
         id: docker_build
