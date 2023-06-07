@@ -75,4 +75,4 @@ jobs:
           platforms: ${{ matrix.platforms }}
           file: ${{ matrix.distro }}-${{ matrix.tag }}/Dockerfile
           push: ${{ github.event_name == 'push' }}
-          tags: pizzafactory0contorno/piatto:${{ matrix.distro }}-${{ matrix.tag }}
+          tags: pizzafactory0contorno/piatto:${{ matrix.distro }}-${{ matrix.tag }},pizzafactory0contorno/piatto:${{ matrix.tag }}-${{ matrix.distro }}
