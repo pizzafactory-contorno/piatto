@@ -90,4 +90,4 @@ jobs:
           push: ${{ github.event_name == 'push' }}
           tags: pizzafactory0contorno/piatto:${{ matrix.distro }}-${{ matrix.tag }},pizzafactory0contorno/piatto:${{ matrix.tag }}-${{ matrix.distro }}
           cache-from: type=gha
-          cache-to: type=gha,mode=max
+          cache-to: type=gha,mode=max,scope=${{ matrix.distro }}-${{ matrix.tag }}
