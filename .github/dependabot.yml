@@ -84,3 +84,11 @@ updates:
     - "~>20.5"
   schedule:
     interval: daily
+- package-ecosystem: docker
+  directory: ubuntu-22.04
+  ignore:
+  - dependency-name: ubuntu
+    versions:
+    - "~>22.5"
+  schedule:
+    interval: daily
