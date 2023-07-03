@@ -7,17 +7,17 @@ updates:
 - package-ecosystem: docker
   directory: /alpine-3.10
   ignore:
-  - dependency-name: debian
+  - dependency-name: alpine
     versions:
-    - "~> 3.10"
+    - "!= 3.10"
   schedule:
     interval: daily
 - package-ecosystem: docker
   directory: /alpine-3.15.0
   ignore:
-  - dependency-name: debian
+  - dependency-name: alpine
     versions:
-    - "~> 3.15.0"
+    - "!= 3.15.0"
   schedule:
     interval: daily
 - package-ecosystem: docker
@@ -25,7 +25,7 @@ updates:
   ignore:
   - dependency-name: debian
     versions:
-    - "~> 10.pre.slim"
+    - "!= 10.pre.slim"
   schedule:
     interval: daily
 - package-ecosystem: docker
@@ -33,7 +33,7 @@ updates:
   ignore:
   - dependency-name: debian
     versions:
-    - "~> 10.1.pre.slim"
+    - "!= 10.1.pre.slim"
   schedule:
     interval: daily
 - package-ecosystem: docker
@@ -41,7 +41,7 @@ updates:
   ignore:
   - dependency-name: debian
     versions:
-    - "~> 10.2.pre.slim"
+    - "!= 10.2.pre.slim"
   schedule:
     interval: daily
 - package-ecosystem: docker
@@ -49,7 +49,7 @@ updates:
   ignore:
   - dependency-name: debian
     versions:
-    - "~> 11.1.pre.slim"
+    - "!= 11.1.pre.slim"
   schedule:
     interval: daily
 - package-ecosystem: docker
@@ -57,7 +57,7 @@ updates:
   ignore:
   - dependency-name: debian
     versions:
-    - "~>9.11.pre.slim"
+    - "!= 9.11.pre.slim"
   schedule:
     interval: daily
 - package-ecosystem: docker
@@ -65,7 +65,7 @@ updates:
   ignore:
   - dependency-name: ubuntu
     versions:
-    - "~>16.5"
+    - "!= 16.04"
   schedule:
     interval: daily
 - package-ecosystem: docker
@@ -73,7 +73,7 @@ updates:
   ignore:
   - dependency-name: ubuntu
     versions:
-    - "~>18.5"
+    - "!= 18.04"
   schedule:
     interval: daily
 - package-ecosystem: docker
@@ -81,7 +81,7 @@ updates:
   ignore:
   - dependency-name: ubuntu
     versions:
-    - "~>20.5"
+    - "!= 20.04"
   schedule:
     interval: daily
 - package-ecosystem: docker
@@ -89,6 +89,6 @@ updates:
   ignore:
   - dependency-name: ubuntu
     versions:
-    - "~>22.5"
+    - "!= 22.04"
   schedule:
     interval: daily
