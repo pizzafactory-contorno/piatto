@@ -1,11 +1,11 @@
 version: 2
 updates:
 - package-ecosystem: docker
-  directory: alpine
+  directory: /alpine
   schedule:
     interval: daily
 - package-ecosystem: docker
-  directory: alpine-3.10
+  directory: /alpine-3.10
   ignore:
   - dependency-name: debian
     versions:
@@ -13,7 +13,7 @@ updates:
   schedule:
     interval: daily
 - package-ecosystem: docker
-  directory: alpine-3.15.0
+  directory: /alpine-3.15.0
   ignore:
   - dependency-name: debian
     versions:
@@ -21,7 +21,7 @@ updates:
   schedule:
     interval: daily
 - package-ecosystem: docker
-  directory: debian-10
+  directory: /debian-10
   ignore:
   - dependency-name: debian
     versions:
@@ -29,7 +29,7 @@ updates:
   schedule:
     interval: daily
 - package-ecosystem: docker
-  directory: debian-10.1
+  directory: /debian-10.1
   ignore:
   - dependency-name: debian
     versions:
@@ -37,7 +37,7 @@ updates:
   schedule:
     interval: daily
 - package-ecosystem: docker
-  directory: debian-10.2
+  directory: /debian-10.2
   ignore:
   - dependency-name: debian
     versions:
@@ -45,7 +45,7 @@ updates:
   schedule:
     interval: daily
 - package-ecosystem: docker
-  directory: debian-11.1
+  directory: /debian-11.1
   ignore:
   - dependency-name: debian
     versions:
@@ -53,7 +53,7 @@ updates:
   schedule:
     interval: daily
 - package-ecosystem: docker
-  directory: debian-9.11
+  directory: /debian-9.11
   ignore:
   - dependency-name: debian
     versions:
@@ -61,7 +61,7 @@ updates:
   schedule:
     interval: daily
 - package-ecosystem: docker
-  directory: ubuntu-16.04
+  directory: /ubuntu-16.04
   ignore:
   - dependency-name: ubuntu
     versions:
@@ -69,7 +69,7 @@ updates:
   schedule:
     interval: daily
 - package-ecosystem: docker
-  directory: ubuntu-18.04
+  directory: /ubuntu-18.04
   ignore:
   - dependency-name: ubuntu
     versions:
@@ -77,7 +77,7 @@ updates:
   schedule:
     interval: daily
 - package-ecosystem: docker
-  directory: ubuntu-20.04
+  directory: /ubuntu-20.04
   ignore:
   - dependency-name: ubuntu
     versions:
@@ -85,7 +85,7 @@ updates:
   schedule:
     interval: daily
 - package-ecosystem: docker
-  directory: ubuntu-22.04
+  directory: /ubuntu-22.04
   ignore:
   - dependency-name: ubuntu
     versions:
