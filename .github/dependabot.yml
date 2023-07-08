@@ -1,10 +1,6 @@
 version: 2
 updates:
 - package-ecosystem: docker
-  directory: /alpine
-  schedule:
-    interval: daily
-- package-ecosystem: docker
   directory: /alpine-3.10
   ignore:
   - dependency-name: alpine
