@@ -9,9 +9,7 @@
     }
   ],
   "extends": ["config:base"],
-  "enabledManagers": [
-    "dockerfile"
-  ],
+  "enabledManagers": ["github-actions","dockerfile"],
 
   "schedule": [
     "every 6 hour after 00:00 and before 23:59 every day"
