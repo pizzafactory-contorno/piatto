@@ -77,6 +77,8 @@ jobs:
             distro: ubuntu
             platforms: linux/amd64, linux/arm/v7, linux/arm64/v8, linux/ppc64le, linux/s390x
     steps:
+      - id: repository
+        run: echo "name=${GITHUB_REPOSITORY#${GITHUB_REPOSITORY_OWNER}/}" >> $GITHUB_OUTPUT
       -
         name: Checkout
         uses: actions/checkout@v3
@@ -101,6 +103,6 @@ jobs:
           platforms: ${{ matrix.platforms }}
           file: ${{ matrix.distro }}-${{ matrix.tag }}/Dockerfile
           push: ${{ github.event_name == 'push' }}
-          tags: pizzafactory0contorno/piatto:${{ matrix.distro }}-${{ matrix.tag }},pizzafactory0contorno/piatto:${{ matrix.tag }}-${{ matrix.distro }}
+          tags: pizzafactory0contorno/${{ steps.repository.outputs.name }}:${{ matrix.distro }}-${{ matrix.tag }},pizzafactory0contorno/piatto:${{ matrix.tag }}-${{ matrix.distro }}
           cache-from: type=gha
           cache-to: type=gha,mode=max,scope=${{ matrix.distro }}-${{ matrix.tag }}
