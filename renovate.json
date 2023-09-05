@@ -8,6 +8,7 @@
       "enabled": false
     }
   ],
+  "dependencyDashboard": false,
   "extends": ["config:recommended"],
   "enabledManagers": ["github-actions","dockerfile"],
 
