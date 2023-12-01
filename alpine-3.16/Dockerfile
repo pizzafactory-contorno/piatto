@@ -1,4 +1,4 @@
-FROM alpine:3.16@sha256:46805d27c6dedb13b98f3236c3fa590c4ea25b2328a192d280d302003d99f722
+FROM alpine:3.16@sha256:e4cdb7d47b06ba0a062ad2a97a7d154967c8f83934594d9f2bd3efa89292996b
 LABEL maintainer="Masaki Muranaka <monaka@monami-ya.com>"
 
 RUN apk add --update --no-cache sudo bash bash-completion git openssh-client shadow && \
