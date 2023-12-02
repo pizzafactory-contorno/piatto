@@ -1,4 +1,4 @@
-FROM ubuntu:20.04@sha256:8517db592129015f59735a921fa1780d2775ba7dc4353e306d344a6308480154
+FROM ubuntu:20.04@sha256:f5c3e53367f142fab0b49908550bdcdc4fb619d2f61ec1dfa60d26e0d59ac9e7
 LABEL maintainer="Masaki Muranaka <monaka@monami-ya.com>"
 
 RUN apt-get update && apt-get upgrade -y && apt-get install -y sudo git vim openssh-client && \
