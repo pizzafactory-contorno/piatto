@@ -1,4 +1,4 @@
-FROM ubuntu:22.04@sha256:c340a09ae7e54d8eabe1e5c68a719f13bc360bf1972bbc64a5f3ad2d330f71d2
+FROM ubuntu:22.04@sha256:6042500cf4b44023ea1894effe7890666b0c5c7871ed83a97c36c76ae560bb9b
 LABEL maintainer="Masaki Muranaka <monaka@monami-ya.com>"
 
 RUN apt-get update && apt-get upgrade -y && apt-get install -y sudo git vim openssh-client && \
