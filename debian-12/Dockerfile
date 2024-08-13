@@ -1,4 +1,4 @@
-FROM debian:12-slim@sha256:e7062870b4d50179b6968d740c3620675702013abc952e482f6574a4eb68439e
+FROM debian:12-slim@sha256:2ccc7e39b0a6f504d252f807da1fc4b5bcd838e83e4dec3e2f57b2a4a64e7214
 LABEL maintainer="Masaki Muranaka <monaka@monami-ya.com>"
 
 RUN apt-get update && apt-get upgrade -y && apt-get install -y sudo git vim openssh-client && \
