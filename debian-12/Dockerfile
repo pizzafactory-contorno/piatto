@@ -3,7 +3,7 @@ LABEL maintainer="Masaki Muranaka <monaka@monami-ya.com>"
 
 RUN apt-get update && apt-get upgrade -y && apt-get install -y sudo git vim openssh-client && \
     apt-get clean && rm -rf /var/lib/apt/lists/* && \
-    adduser --system --home /home/user --shell /bin/bash --uid 1000 --group --disabled-password user && \
+    adduser --system --home /home/user --shell /bin/bash --uid 1001 --group --disabled-password user && \
     adduser user root && \
     echo "%root ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers && \
     mkdir -p /projects && \

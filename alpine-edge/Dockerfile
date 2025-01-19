@@ -2,7 +2,7 @@ FROM alpine:edge
 LABEL maintainer="Masaki Muranaka <monaka@monami-ya.com>"
 
 RUN apk add --update --no-cache sudo bash bash-completion git openssh-client shadow && \
-    adduser -S user -h /home/user -s /bin/bash -G root -u 1000 && \
+    adduser -S user -h /home/user -s /bin/bash -G root -u 1001 && \
     usermod -p "*" user && \ 
     apk del --no-cache shadow && \
     echo "%root ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers && \
